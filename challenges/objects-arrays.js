@@ -8,6 +8,36 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
+const tyrannosaurus = {
+  
+  weight: 7000,
+  era: 'Late Cretaceous',
+  eatType: 'carnivorous',
+  howLong: 12,
+  
+  roar : function ()
+  {
+    return "RAWERSRARARWERSARARARRRR!";
+  }
+};
+
+const stegosaurus = {
+  
+  weight: 2000,
+  era: 'Late Cretaceous',
+  eatType: 'herbivorous',
+  howLong: 9,
+};
+
+
+const velociraptor = {
+  
+  weight: 150000,
+  era: 'Late Creataceous',
+  eatType: 'carnivorous',
+  howLong: 1.8,
+};
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
@@ -15,20 +45,20 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.eatType);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.howLong);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.era);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
