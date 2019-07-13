@@ -80,6 +80,9 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+universities = graduates.sort();
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -89,11 +92,22 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for(let i = 0; i < graduates.length; i++)
+{
+   contactInfo.push(`${i.first_name}` `${i.email}`);
+}
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+// Hmm, I don't know about this one...
+
+//uni.filter(element => element.)
+
 console.log(uni);
 
 
@@ -119,6 +133,13 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+
+animalNames.foreach(eachAnimal => {
+
+  //animalNames.push(eachAnimal.animalNames)
+
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -128,6 +149,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+
+lowerCase.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase());
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -136,6 +160,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+
+lowerPopulation.filter(eachPopulationStat => eachPopulationStat < 5); // need to check this one, but the idea is generally right
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -144,6 +171,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
+
+populationTotal = (populationAccmulator, currentValue) => populationAccmulator + currentValue);
+
+console.log(zooAnimals.reduce(populationTotal));
+
 console.log(populationTotal);
 
 
