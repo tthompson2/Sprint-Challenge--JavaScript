@@ -81,7 +81,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-universities = graduates.sort();
+//universities = graduates.sort();
 
 console.log(universities)
 
@@ -95,7 +95,7 @@ const contactInfo = [];
 
 for(let i = 0; i < graduates.length; i++)
 {
-   contactInfo.push(`${i.first_name}` `${i.email}`);
+   contactInfo.push(graduates[i].first_name + " " + graduates[i].email + " ");
 }
 
 console.log(contactInfo);
@@ -134,11 +134,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-animalNames.foreach(eachAnimal => {
+/*animalNames.foreach(eachAnimal => {
 
   //animalNames.push(eachAnimal.animalNames)
 
-});
+});*/
 
 console.log(animalNames);
 
@@ -150,7 +150,10 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-lowerCase.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase());
+for(let i = 0; i < zooAnimals.length; zooAnimals++)
+{
+  lowerCase.push(zooAnimals.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase()));
+}
 
 console.log(lowerCase); 
 
@@ -172,11 +175,11 @@ The zoos need to know their total animal population across the United States.  F
 */
 const populationTotal = 0;
 
-populationTotal = (populationAccmulator, currentValue) => populationAccmulator + currentValue);
+/*populationTotal = (populationAccmulator, currentValue) => populationAccmulator + currentValue);
 
 console.log(zooAnimals.reduce(populationTotal));
 
-console.log(populationTotal);
+console.log(populationTotal);*/
 
 
 /* 
