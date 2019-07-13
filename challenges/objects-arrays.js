@@ -150,7 +150,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-for(let i = 0; i < zooAnimals.length; zooAnimals++)
+for(let i = 0; i < zooAnimals.length; i++)
 {
   lowerCase.push(zooAnimals.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase()));
 }
@@ -164,7 +164,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 const lowerPopulation = [];
 
-lowerPopulation.filter(eachPopulationStat => eachPopulationStat < 5); // need to check this one, but the idea is generally right
+lowerPopulation.push(zooAnimals.filter(eachPopulationStat => eachPopulationStat.population < 5)); // need to check this one, but the idea is generally right
 
 console.log(lowerPopulation);
 
