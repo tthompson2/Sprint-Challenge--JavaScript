@@ -86,7 +86,7 @@ for(let i = 0; i < graduates.length; i++)
   universities.push(graduates[i].university);
 }
 
-//universities = universities.sort();
+ universities.sort();
 
 console.log(universities);
 
@@ -107,14 +107,11 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
+//const uni = [];
 
 // Hmm, I don't know about this one...
 
-/*for(let i = 0; i < graduates.length; i++)
-{
-  //uni.push(graduates[i].university.indexOf("uni"));
-} */
+ const uni = graduates.filter(element => element.university.includes('Uni'));
 
 console.log(uni);
 
@@ -142,11 +139,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-/*animalNames.foreach(eachAnimal => {
+zooAnimals.forEach(eachAnimal => {
 
-  //animalNames.push(eachAnimal.animalNames)
+  animalNames.push("Name: "+ eachAnimal.animal_name  + "Scientific: " + eachAnimal.scientific_name);
 
-});*/
+});
 
 console.log(animalNames);
 
@@ -158,10 +155,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-for(let i = 0; i < zooAnimals.length; i++)
-{
-  lowerCase.push(zooAnimals.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase()));
-}
+lowerCase.push(zooAnimals.map(eachLowerCase => eachLowerCase.animal_name.toLowerCase()));
 
 console.log(lowerCase); 
 
@@ -170,9 +164,9 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+// lowerPopulation = [];
 
-lowerPopulation.push(zooAnimals.filter(eachPopulationStat => eachPopulationStat.population < 5)); // need to check this one, but the idea is generally right
+const lowerPopulation = (zooAnimals.filter(eachPopulationStat => eachPopulationStat.population < 5)); // need to check this one, but the idea is generally right
 
 console.log(lowerPopulation);
 
@@ -181,13 +175,11 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+//const populationTotal = 0;
 
-/*populationTotal = (populationAccmulator, currentValue) => populationAccmulator + currentValue);
+const populationTotal = zooAnimals.reduce((populationAccmulator, currentValue) => (populationAccmulator + currentValue.population),0);
 
-console.log(zooAnimals.reduce(populationTotal));
-
-console.log(populationTotal);*/
+console.log(populationTotal);
 
 
 /* 
