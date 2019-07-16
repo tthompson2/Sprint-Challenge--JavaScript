@@ -109,9 +109,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 //const uni = [];
 
-// Hmm, I don't know about this one...
-
- const uni = graduates.filter(element => element.university.includes('Uni'));
+const uni = graduates.filter(element => element.university.includes('Uni'));
 
 console.log(uni);
 
@@ -181,10 +179,8 @@ const populationTotal = zooAnimals.reduce((populationAccmulator, currentValue) =
 
 console.log(populationTotal);
 
-
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
