@@ -8,6 +8,32 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
+const tyrannosaurus = {
+
+  eater: 'carnivorous',
+  weight: 7000,
+  length: '12m',
+  era : 'Late Cretaceous',
+  roar: function() {
+    return "RAWERSRARARWERSARARARRRR!";
+  }
+}
+
+const stegosaurus = {
+
+  eater: 'herbivorous',
+  weight: 2000,
+  length: '9m',
+  era: 'Late Jurassic'
+}
+
+const velociraptor = {
+  eater: 'carnivious',
+  weight: 2000,
+  length: '1.8m',
+  era: 'Late Cretaceous'
+}
+
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
@@ -15,20 +41,20 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.eater);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.era);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tyrannosaurus.roar);
 
 
 // ==== Arrays ====
@@ -90,6 +116,13 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 console.log(animalNames);
+
+let returningNames = zooAnimals.forEach(element => {
+  
+    animalNames.push(zooAnimals.animal_name);
+    animalNames.push(zooAnimals.scientific_name);
+
+});
 
 /* Request 2: .map()    
 
