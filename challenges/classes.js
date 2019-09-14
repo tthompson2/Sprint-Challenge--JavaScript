@@ -1,16 +1,15 @@
-class secondCuboidMaker{
-constructor(length, width, height)
-{
-  this.length = length,
-  this.width = width,
-  this.height = height
-} 
-volume(){
-    return this.length*this.width*this.height;
-  }
-  surfaceArea(){
-    return 2*(this.length * this.width + this.length * this.height + this.width * this.height);
- }
+class secondCuboidMaker {
+    constructor(length, width, height) {
+        this.length = length,
+            this.width = width,
+            this.height = height
+    }
+    volume() {
+        return this.length * this.width * this.height;
+    }
+    surfaceArea() {
+        return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    }
 
 }
 
@@ -31,11 +30,11 @@ class CubeMaker extends secondCuboidMaker {
     }
 
     surfaceArea() {
-        return (this.area*6);
+        return (this.area * 6);
     }
 
     volume() {
-        return (this.area*this.area*this.area);
+        return (this.area * this.area * this.area);
     }
 }
 
