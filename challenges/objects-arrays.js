@@ -78,6 +78,14 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 console.log(universities)
 
+graduates.forEach(element => {
+
+    universities.push(element);
+
+});
+
+console.log(universities.sort());
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -85,13 +93,28 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
 
+graduates.forEach(element => {
+
+  contactInfo.push(`${element.first_name} ${element.email}`);
+
+});
+
+console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-console.log(uni);
 
+graduates.forEach(element => {
+
+   if(element.university.includes('Uni'))
+   {
+     uni.push(element.university);
+   }
+
+});
+
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -115,22 +138,29 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-console.log(animalNames);
 
-let returningNames = zooAnimals.forEach(element => {
+zooAnimals.forEach(element => {
   
-    animalNames.push(zooAnimals.animal_name);
-    animalNames.push(zooAnimals.scientific_name);
+    animalNames.push(element.animal_name);
+    animalNames.push(element.scientific_name);
 
 });
+
+console.log(animalNames);
 
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
+let lowerCase = [];
 
-const lowerCase = [];
+lowerCase = zooAnimals.map(element => {
+
+     return element.animal_name.toLowerCase();
+
+});
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -138,7 +168,12 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+let lowerPopulation = [];
+
+lowerPopulation = zooAnimals.filter(element => {
+    return element.population < 5;
+});
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -147,6 +182,7 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
+
 console.log(populationTotal);
 
 
