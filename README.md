@@ -30,26 +30,44 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach and .map is that the former is a higher order function that returns an edited version of the original array, and the latter will return an new array which was created by performing the operations in the callback function called in map.
+
 2. What is the difference between a function and a method?
+
+A method is a function that is defined in a object. To be able to use a method you'll need to call this method with your object. Functions aren't associated with objects a function can just exist on it's own in code.
 
 3. What is closure?
 
+Closure is the concept explaining how variables defined in functions are local to that the function it was created for. It works in tandem with the concept of scoping, and has to be carefully monitored to ensure that the variables that you're creating inside of your function can be accessed outside of your function if need be. One way that the variables enclosed in the function can be accessed outside of the function is if the function will return that variable.
+
 4. Describe the four rules of the 'this' keyword.
 
+The this keyword has four different bindings. The different bindings associated with this are: Global, New, Implicit, and Explicit.
+
+Global binding is binding that is performed to bind to Javascript itself. This binding has to be placed outside of all functions. It is done with this command in Javascript: console.log(this);
+
+New binding is binding that is performed when you initialize a new object using a pre-defined object definiton. It will create a new instance of the object in memory that will have memory allocated for all of the different methods(functions), and properties(variables/key-value pairs) associated with the object.
+
+Explicit binding is when you use the .call and .apply functions on different objects to make an object be able to access the properities and methods of a completely different object.
+
+Implicit binding is when you the .this keyword to access the object that that the this refers to contextually.
+
 5. Why do we need super() in an extended class?
+
+You need a super() in an extended class to be able to reach and intialize all of the methods and properities that are defined in the class that the object is inheriting from.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [X] Create a forked copy of this project.
 - [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-- [ ] You are now ready to build this project with your preferred IDE
-- [ ] Implement the project on your Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] You are now ready to build this project with your preferred IDE
+- [X] Implement the project on your Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
